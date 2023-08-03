@@ -6,9 +6,12 @@ console.log(changeColor)
 console.log(colorName)
 
 changeColor.addEventListener("click", (event) => {
-    
-  colorName.textContent = getRandomHexColor();
-  bodyEl.style.backgroundColor = getRandomHexColor()
+  const randomСolor = getRandomHexColor()
+  colorName.textContent = randomСolor;
+  bodyEl.style.backgroundColor = randomСolor;
+
+  
+
 });
 
 
