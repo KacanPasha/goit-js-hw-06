@@ -16,7 +16,7 @@ const images = [
 
 const ulEl = document.querySelector(".gallery");
 
-images.forEach((image) => {
+images.map((image) => {
   const liEl = document.createElement("li");
   const imgElement = document.createElement("img");
 
@@ -26,9 +26,14 @@ images.forEach((image) => {
   liEl.appendChild(imgElement);
   ulEl.appendChild(liEl);
 
-  imgElement.style.width = "350px";
-  imgElement.style.height = "200px";
-  liEl.style.padding = "20px";
-  ulEl.style.display = "flex";
-  ulEl.style.listStyle = 'none';
+
+ imgElement.style.width = "350px";
+ imgElement.style.height = "200px";
+ liEl.style.padding = "20px";
+ ulEl.style.display = "flex";
+ ulEl.style.listStyle = 'none';
+
+
 });
+
+

@@ -12,10 +12,17 @@ login.addEventListener('submit', (event) => {
   } else {
     const textEmail = emailInput.value;
     const textPassword = passwordInput.value;
-    console.log(textEmail);
-    console.log(textPassword);
+     const result = {textEmail, textPassword};
+
+    console.log(result);
+    form.reset()
   }
 });
+
+
+
+
+
 
 
 
