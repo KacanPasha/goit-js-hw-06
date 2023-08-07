@@ -16,24 +16,26 @@ const images = [
 
 const ulEl = document.querySelector(".gallery");
 
-images.map((image) => {
-  const liEl = document.createElement("li");
-  const imgElement = document.createElement("img");
+const markup = images.map((image) => 
 
-  imgElement.src = image.url;
-  imgElement.alt = image.alt;
-
-  liEl.appendChild(imgElement);
-  ulEl.appendChild(liEl);
-
-
- imgElement.style.width = "350px";
- imgElement.style.height = "200px";
- liEl.style.padding = "20px";
- ulEl.style.display = "flex";
- ulEl.style.listStyle = 'none';
+   `
+  <li>
+    <img
+        src=${image.url}
+        alt=${image.alt}
+        width="350"
+        height="200">
+       
+  </li>
+  `
+).join("");
+ulEl.insertAdjacentHTML("afterbegin", markup);
 
 
-});
+
+ulEl.style.display = "flex";
+ulEl.style.gap = "10px";
+ulEl.style.listStyle = "none";
+
 
 
